@@ -88,6 +88,8 @@ void write_metainfo(FILE * file, unsigned char *hash_string)
 	   and the first entry is the announce url */
 	fprintf(file, "d8:announce%zu:%s",
 		strlen(announce_url), announce_url);
+  if (web_seed_url != NULL)
+  	fprintf(file, "8:url-list%zu:%s", strlen(web_seed_url), web_seed_url);
 	/* now add the comment if one is specified */
 	if (comment != NULL)
 		fprintf(file, "7:comment%zu:%s", strlen(comment), comment);

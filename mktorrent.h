@@ -34,6 +34,7 @@ extern int target_is_directory;	/* target is a directory not just a single file 
 extern int no_creation_date;	/* don't write the creation date */
 extern int private;		/* set the private flag */
 extern int verbose;		/* be verbose */
+extern char *web_seed_url;	/* web seed URL */
 
 /* information calculated by read_dir() */
 extern unsigned long long size;	/* combined size of all files in the torrent */
